@@ -14,11 +14,11 @@ public class TextProfile {
         this.instruction = "";
     }
 
-    public TextProfile(UUID textID, String textData, String instruction) {
-        this.textID = textID;
-        this.textData = textData;
-        this.instruction = instruction;
-    }
+//    public TextProfile(UUID textID, String textData, String instruction) {
+//        this.textID = textID;
+//        this.textData = textData;
+//        this.instruction = instruction;
+//    }
 
     public UUID getTextID() {
         return textID;
