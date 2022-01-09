@@ -1,24 +1,31 @@
 package com.ey.singlingweb.text;
 
+import com.ey.singlingweb.TransformationManager;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class TextProfile {
 
     private UUID textID;
     private String textData;
-    private String instruction;
+    //private List<Instruction> instructions;
+    private List<TransformationManager.Instruction> instructions;
+
+    public TextProfile() { }
 
     public TextProfile(UUID textID, String textData) {
         this.textID = textID;
         this.textData = textData;
-        this.instruction = "";
+        this.instructions = new ArrayList<>();
     }
 
-//    public TextProfile(UUID textID, String textData, String instruction) {
-//        this.textID = textID;
-//        this.textData = textData;
-//        this.instruction = instruction;
-//    }
+    public TextProfile(UUID textID, String textData, List<TransformationManager.Instruction> instructions) {
+        this.textID = textID;
+        this.textData = textData;
+        this.instructions = instructions;
+    }
 
     public UUID getTextID() {
         return textID;
@@ -36,11 +43,7 @@ public class TextProfile {
         this.textData = textData;
     }
 
-    public String getInstruction() {
-        return instruction;
-    }
-
-    public void setInstruction(String instruction) {
-        this.instruction = instruction;
+    public List<TransformationManager.Instruction> getInstructions() {
+        return instructions;
     }
 }
